@@ -5,22 +5,26 @@ void main() {
 
 void selectionSort(List arr) {
   int n = arr.length;
+  // for (int i = 0; i < n - 1; i++) {
+  //   for (int j = i + 1; j < n; j++) {
+  //     if (arr[j] < arr[i]) {
+  //       int temp = arr[j];
+  //       arr[j] = arr[i];
+  //       arr[i] = temp;
+  //     }
+  //   }
+  //   print(arr);
+  // }
   for (int i = 0; i < n - 1; i++) {
-    int minIndex = i; // pehle assume karo i hi minimum hai
-
+    int minIndex = i;
     for (int j = i + 1; j < n; j++) {
       if (arr[j] < arr[minIndex]) {
-        minIndex = j; //  swap mat karo, sirf index yaad rakho
+        minIndex = j;
       }
     }
-    // for (int i = 0; i < n - 1; i++) {
-    // for (int j = i + 1; j < n; j++) {
-    // if (arr[j] < arr[i]) {
-    // int temp = arr[j];
-    // arr[j] = arr[i];
-    // arr[i] = temp;
-    // }
-    // }
+    int temp = arr[minIndex];
+    arr[minIndex] = arr[i];
+    arr[i] = temp;
+    print(arr);
   }
-  print(arr);
 }

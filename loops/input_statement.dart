@@ -7,7 +7,7 @@ void main() {
 
   int i = 1;
 
-  print("The number you entered is: $input");
+  print("The number you entered is: $n");
 
   while (i <= 10) {
     int product = n! * i;
