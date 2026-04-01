@@ -1,0 +1,3 @@
+void main() {
+  Map map = {};
+}
